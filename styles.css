@@ -1,0 +1,98 @@
+:root {
+    --bg: #0f172a;
+    --panel: #111827;
+    --accent: #38bdf8;
+    --text: #e2e8f0;
+    --muted: #94a3b8;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at top, #1f2937 0%, #020617 70%);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+    color: var(--text);
+}
+
+#container {
+    background: rgba(2, 6, 23, 0.4);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    border-radius: 20px;
+    padding: 1.5rem 1.5rem 1rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+#title {
+    text-align: center;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.04em;
+}
+
+#subtitle {
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin-bottom: 1rem;
+}
+
+svg {
+    background: radial-gradient(circle, #020617 0%, #020617 60%, #000 90%);
+    border-radius: 16px;
+}
+
+.bar {
+    fill: #0ea5e9;
+    transition: 0.15s ease-out;
+}
+
+.bar:hover {
+    fill: #eab308;
+}
+
+.axis text {
+    fill: #cbd5f5;
+    font-size: 0.6rem;
+}
+
+.axis path,
+.axis line {
+    stroke: rgba(203, 213, 225, 0.25);
+}
+
+#tooltip {
+    position: absolute;
+    background: rgba(15, 23, 42, 0.9);
+    color: #e2e8f0;
+    padding: 0.5rem 0.65rem 0.4rem;
+    border-radius: 8px;
+    pointer-events: none;
+    font-size: 0.7rem;
+    line-height: 1.2;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    opacity: 0;
+    transition: opacity 0.1s ease-out;
+}
+
+#tooltip strong {
+    display: block;
+    margin-bottom: 2px;
+}
+
+.y-label {
+    fill: #94a3b8;
+    font-size: 0.7rem;
+}
+
+@media (max-width: 950px) {
+    svg {
+        width: 100%;
+        height: auto;
+    }
+}
