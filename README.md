@@ -32,7 +32,6 @@ L’interfaccia è stata realizzata in **HTML**, **CSS** e **JavaScript puro**, 
 ### 🚀 Demo
 
 👉 **Live Preview:** [https://cgiuseppe8786.github.io/BarChartDataVisualization/](https://cgiuseppe8786.github.io/BarChartDataVisualization/)  
-*(sostituisci l’URL con quello del tuo repository GitHub Pages se diverso)*
 
 ---
 
