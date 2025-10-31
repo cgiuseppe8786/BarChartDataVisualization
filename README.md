@@ -25,19 +25,18 @@ L’interfaccia è stata realizzata in **HTML**, **CSS** e **JavaScript puro**, 
 - **Asse temporale orizzontale (X)** automatico da 1947 → 2015  
 - **Asse verticale (Y)** scalato sui valori reali del GDP
 - Tema **chiaro/scuro persistente**, commutabile via icona 🌙/☀️
-- Layout con effetto **glassmorphism**, leggibile e moderno
 
 ---
 
 ### 🚀 Demo
 
-👉 **Live Preview:** [https://cgiuseppe8786.github.io/BarChartDataVisualization/](https://cgiuseppe8786.github.io/BarChartDataVisualization/)  
+👉 **Live Preview:** [https://cgiuseppe8786.github.io/BarChartDataVisualization/](https://cgiuseppe8786.github.io/BarChartDataVisualization/).  
 
 ---
 
 ### 💻 Codice sorgente
 
-📂 **Repository:** [https://github.com/cgiuseppe8786/BarChartDataVisualization](https://github.com/cgiuseppe8786/BarChartDataVisualization)
+📂 **Repository:** [https://github.com/cgiuseppe8786/BarChartDataVisualization/](https://github.com/cgiuseppe8786/BarChartDataVisualization/).
 
 ---
 
