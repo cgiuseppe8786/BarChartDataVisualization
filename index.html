@@ -2,61 +2,64 @@
 <html lang="it">
 
 <head>
-    <meta charset="UTF-8" />
-    <!-- Viewport per layout responsive coerente anche su mobile -->
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <!-- Viewport per layout responsive coerente anche su mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Bar Chart GDP</title>
+  <title>Bar Chart GDP</title>
 
-    <!-- D3.js v7 da CDN per costruzione del grafico -->
-    <script src="https://d3js.org/d3.v7.min.js"></script>
+  <!-- D3.js v7 da CDN per costruzione del grafico -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
 
-    <!-- Stili dell’app (includono il tema e il layout del container) -->
-    <link rel="stylesheet" href="styles.css" />
+  <!-- Stili dell’app (includono il tema e il layout del container) -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
-<!--
-    Lo script è defer per:
-    - caricare dopo il parsing dell’HTML
-    - avere già gli elementi DOM disponibili
-  -->
-<script src="script.js" defer></script>
+
 
 <body>
-    <!--
+  <!--
       Toggle tema (chiaro/scuro)
       Implementato come <span> con ruolo ARIA button + focus con tastiera.
       L’icona viene aggiornata dinamicamente in script.js.
     -->
-    <span id="theme-toggle" class="theme-icon" role="button" tabindex="0" aria-label="Cambia tema"
-        title="Cambia tema">🌙</span>
+  <span id="theme-toggle" class="theme-icon" role="button" tabindex="0" aria-label="Cambia tema"
+    title="Cambia tema">🌙</span>
 
-    <!--
+  <!--
       Contenitore principale: box con effetto vetro che contiene
       titolo, descrizione e l’<svg> destinata a D3.
     -->
-    <div id="container">
-        <!-- Titolo richiesto -->
-        <h1 id="title">USA Gross Domestic Product</h1>
+  <div id="container">
+    <!-- Titolo richiesto -->
+    <h1 id="title">USA Gross Domestic Product</h1>
 
-        <!-- Sottotitolo descrittivo per dare contesto alla serie storica -->
-        <p id="subtitle">
-            Quarterly, billions of dollars (chained) – 1947 → 2015
-        </p>
+    <!-- Sottotitolo descrittivo per dare contesto alla serie storica -->
+    <p id="subtitle">
+      Quarterly, billions of dollars (chained) – 1947 → 2015
+    </p>
 
-        <!--
+    <!--
         Area di disegno del grafico.
         D3 selezionerà questo elemento tramite #chart e vi appenderà gruppi,
         assi, barre, label, ecc.
       -->
-        <svg id="chart" width="860" height="500"></svg>
+    <svg id="chart" width="860" height="500"></svg>
 
-        <!--
+    <!--
         Tooltip assoluto (posizionato via JS con mousemove)
         Rimane nascosto finché non si passa sopra una barra.
       -->
-        <div id="tooltip"></div>
-    </div>
+    <div id="tooltip"></div>
+  </div>
+
+
+  <!--
+    Lo script è defer per:
+    - caricare dopo il parsing dell’HTML
+    - avere già gli elementi DOM disponibili
+  -->
+  <script src="script.js" defer></script>
 </body>
 
 </html>
