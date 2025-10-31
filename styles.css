@@ -1,5 +1,7 @@
 /* =========================================================
    DESIGN TOKENS (light/dark via data-theme)
+   - Variabili di base per sfondo, tipografia e componenti
+   - Usate come singola fonte di verità per i due temi
    ========================================================= */
 :root {
     --bg: radial-gradient(circle at top, #f1f5f9 0%, #cbd5e1 70%);
@@ -15,7 +17,11 @@
     --svg-bg: radial-gradient(circle, #e2e8f0 0%, #cbd5e1 60%, #94a3b8 90%);
 }
 
-/* Tema scuro */
+/* =========================================================
+   TEMA SCURO
+   - Stesse chiavi del tema chiaro per mantenere il mapping 1:1
+   - Il cambio avviene via body[data-theme="dark"]
+   ========================================================= */
 body[data-theme="dark"] {
     --bg: radial-gradient(circle at top, #1f2937 0%, #020617 70%);
     --panel: rgba(2, 6, 23, 0.4);
@@ -31,7 +37,10 @@ body[data-theme="dark"] {
 }
 
 /* =========================================================
-   BASE
+   BASE LAYOUT
+   - Rimuove margini
+   - Centra la card con il grafico
+   - Impedisce lo scroll (dashboard “fissa”)
    ========================================================= */
 * {
     box-sizing: border-box;
@@ -55,8 +64,11 @@ body {
     min-height: 100vh;
 }
 
-
-/* toggle tema */
+/* =========================================================
+   TOGGLE TEMA (icona fissa in alto a destra)
+   - Semplice <span> con ruolo button
+   - Nessuna cornice di default, feedback hover
+   ========================================================= */
 .theme-icon {
     position: fixed;
     top: 14px;
@@ -84,6 +96,11 @@ body {
     outline: none;
 }
 
+/* =========================================================
+   CONTAINER PRINCIPALE
+   - Effetto glass-morphism
+   - Dimensione max per desktop, fluido su mobile
+   ========================================================= */
 #container {
     background: var(--panel);
     backdrop-filter: blur(14px);
@@ -95,9 +112,11 @@ body {
     width: 100%;
     margin: 1.2rem;
     position: relative;
-
 }
 
+/* =========================================================
+   TITOLI / TESTO DI SUPPORTO
+   ========================================================= */
 #title {
     text-align: center;
     font-size: 1.4rem;
@@ -112,7 +131,11 @@ body {
     margin-bottom: 1rem;
 }
 
-
+/* =========================================================
+   SVG / CHART AREA
+   - Background coerente con tema
+   - Angoli arrotondati per integrarsi col container
+   ========================================================= */
 svg {
     background: var(--svg-bg);
     border-radius: 16px;
@@ -120,6 +143,11 @@ svg {
     height: auto;
 }
 
+/* =========================================================
+   BARRE DEL GRAFICO
+   - Colore da token
+   - Hover con transizione veloce
+   ========================================================= */
 .bar {
     fill: var(--bar);
     transition: 0.15s ease-out;
@@ -129,6 +157,11 @@ svg {
     fill: var(--bar-hover);
 }
 
+/* =========================================================
+   ASSI D3
+   - Testo con opacità ridotta per non dominare
+   - Linee in tinta con il tema
+   ========================================================= */
 .axis text {
     fill: var(--text);
     opacity: 0.7;
@@ -140,6 +173,11 @@ svg {
     stroke: var(--axis);
 }
 
+/* =========================================================
+   TOOLTIP ASSOLUTO
+   - Posizionato rispetto al container via JS
+   - Nascosto di default
+   ========================================================= */
 #tooltip {
     position: absolute;
     background: rgba(15, 23, 42, 0.9);
@@ -163,13 +201,16 @@ svg {
     margin-bottom: 2px;
 }
 
+/* Label asse Y (testo verticale) */
 .y-label {
     fill: var(--muted);
     font-size: 0.7rem;
 }
 
-
-
+/* =========================================================
+   RESPONSIVE
+   - Riduce padding e font su schermi piccoli
+   ========================================================= */
 @media (max-width: 950px) {
     #container {
         width: 100%;
